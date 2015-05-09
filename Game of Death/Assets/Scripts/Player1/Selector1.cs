@@ -9,12 +9,14 @@ public class Selector1 : MonoBehaviour {
 	private bool isFirstPush = true;
 	private Model model;
 	private int modelX, modelY;
+	private float dontSpamDickHead = 0.0f;
+	private float CDpop = 1.0f;
 	
 	public float firstUpdateRate =  0.2f;
 	public float secondUpdateRate =  0.1f;
-	public GameObject unit1;
-	public GameObject unit2;
-	public GameObject unit3;
+	public GameObject Soldat_p1;
+	public GameObject Tank_p1;
+	public GameObject Cavalier_p1;
 	public int nbLine = 10;
 
 	// Use this for initialization
@@ -68,20 +70,25 @@ public class Selector1 : MonoBehaviour {
 
 		this.gameObject.transform.position = new Vector3(x, y, z);
 
-		//if (model.get (modelX, modelY) == 0) {
+		if (Time.time > dontSpamDickHead) {
+			//if (model.get (modelX, modelY) == 0) {
 			if (Input.GetButtonDown ("Fire1")) {
-				GameObject newUnit = (GameObject)GameObject.Instantiate (unit1, new Vector3 (x, 0.5f, z), Quaternion.identity);
+				GameObject newUnit = (GameObject)GameObject.Instantiate (Soldat_p1, new Vector3 (x, 0.5f, z), Quaternion.identity);
 				newUnit.SetActive (true);
 				model.set (modelX, modelY, 1);
+				dontSpamDickHead = Time.time + CDpop;
 			} else if (Input.GetButtonDown ("Fire2")) {
-				GameObject newUnit = (GameObject)GameObject.Instantiate (unit2, new Vector3 (x, 0.5f, z), Quaternion.identity);
+				GameObject newUnit = (GameObject)GameObject.Instantiate (Tank_p1, new Vector3 (x, 0.5f, z), Quaternion.identity);
 				newUnit.SetActive (true);
 				model.set (modelX, modelY, 2);
+				dontSpamDickHead = Time.time + CDpop;
 			} else if (Input.GetButtonDown ("Fire3")) {
-				GameObject newUnit = (GameObject)GameObject.Instantiate (unit3, new Vector3 (x, 0.5f, z), Quaternion.identity);
+				GameObject newUnit = (GameObject)GameObject.Instantiate (Cavalier_p1, new Vector3 (x, 0.5f, z), Quaternion.identity);
 				newUnit.SetActive (true);
-				model.set (modelX, modelY, 2);
+				model.set (modelX, modelY, 3);
+				dontSpamDickHead = Time.time + CDpop;
 			}
+		}
 		//}
 	}
 }
