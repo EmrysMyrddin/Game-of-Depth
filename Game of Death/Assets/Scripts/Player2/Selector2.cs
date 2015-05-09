@@ -9,12 +9,14 @@ public class Selector2 : MonoBehaviour {
 	private bool goingUp = false;
 	private bool isFirstPush = true;
 	private Model model;
+	private float dontSpamDickHead = 0.0f;
+	private float CDpop = 1.0f;
 	
 	public float firstUpdateRate =  0.2f;
 	public float secondUpdateRate =  0.1f;
-	public GameObject unit1;
-	public GameObject unit2;
-	public GameObject unit3;
+	public GameObject Soldat_p2;
+	public GameObject Tank_p2;
+	public GameObject Cavalier_p2;
 	public int nbLine = 10;
 	
 	// Use this for initialization
@@ -69,22 +71,25 @@ public class Selector2 : MonoBehaviour {
 		
 		this.gameObject.transform.position = new Vector3(x, y, z);
 
-		//if(model.get (modelX, modelY) == 0){
+		if (Time.time > dontSpamDickHead) {
+			//if(model.get (modelX, modelY) == 0){
 			if (Input.GetButtonDown ("Fire1_P2")) {
-				GameObject newUnit = (GameObject)GameObject.Instantiate(unit1, new Vector3(x, 0.5f, z), Quaternion.identity);
-				newUnit.SetActive(true);
+				GameObject newUnit = (GameObject)GameObject.Instantiate (Soldat_p2, new Vector3 (x, 0.5f, z), Quaternion.identity);
+				newUnit.SetActive (true);
 				model.set (modelX, modelY, 1);
-			}
-			else if (Input.GetButtonDown ("Fire2_P2")) {
-				GameObject newUnit = (GameObject)GameObject.Instantiate(unit2, new Vector3(x, 0.5f, z), Quaternion.identity);
-				newUnit.SetActive(true);
+				dontSpamDickHead = Time.time + CDpop;
+			} else if (Input.GetButtonDown ("Fire2_P2")) {
+				GameObject newUnit = (GameObject)GameObject.Instantiate (Tank_p2, new Vector3 (x, 0.5f, z), Quaternion.identity);
+				newUnit.SetActive (true);
 				model.set (modelX, modelY, 2);
-			}
-			else if (Input.GetButtonDown ("Fire3_P2")) {
-				GameObject newUnit = (GameObject)GameObject.Instantiate(unit3, new Vector3(x, 0.5f, z), Quaternion.identity);
-				newUnit.SetActive(true);
+				dontSpamDickHead = Time.time + CDpop;
+			} else if (Input.GetButtonDown ("Fire3_P2")) {
+				GameObject newUnit = (GameObject)GameObject.Instantiate (Cavalier_p2, new Vector3 (x, 0.5f, z), Quaternion.identity);
+				newUnit.SetActive (true);
 				model.set (modelX, modelY, 3);
+				dontSpamDickHead = Time.time + CDpop;
 			}
+		}
 		//}
 	}
 }
