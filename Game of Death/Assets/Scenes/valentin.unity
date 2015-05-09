@@ -15672,6 +15672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a64a79bb442b142bef31b3590c5e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 10
   p: {fileID: 866991693}
 --- !u!111 &676813486
 Animation:
@@ -37596,6 +37597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a64a79bb442b142bef31b3590c5e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 10
   p: {fileID: 737606958}
 --- !u!111 &1489472736
 Animation:
