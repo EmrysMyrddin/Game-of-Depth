@@ -52,37 +52,4 @@ public class Jauge : MonoBehaviour {
             perte = true;
         }
     }
-
-    
-
-    void Awake()
-    {
-        objectTransform = GetComponent(typeof(Transform)) as Transform;
-    }
-
-    void OnEnable()
-    {
-        originalPos = objectTransform.localPosition;
-    }
-
-    void Update()
-    {
-        if (perte)
-        {
-            if (shake > 0)
-            {
-                objectTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
-
-                shake -= Time.deltaTime * decreaseFactor;
-            }
-            else
-            {
-                shake = 0f;
-                objectTransform.localPosition = originalPos;
-            }
-
-            perte = false;
-        }
-    }
-
 }

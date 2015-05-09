@@ -8,4 +8,9 @@ public class Play : MonoBehaviour {
     {
         Application.LoadLevel(game);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
