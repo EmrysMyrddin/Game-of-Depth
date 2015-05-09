@@ -4,8 +4,10 @@ using System.Collections;
 
 public class FortressWall : MonoBehaviour {
 
-	int life = 10;
+	public int life = 10;
 	public Text p;
+
+	private bool annimationPlayed = false;
 
 	// Use this for initialization
 	void Start () {
@@ -14,28 +16,23 @@ public class FortressWall : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (life <= 0) {
-			Destroy(gameObject);
+		if (life <= 0 && !annimationPlayed) {
+			Animation anim = gameObject.GetComponent("Animation") as Animation;
+			anim.wrapMode = WrapMode.Once;
+			anim.Play("Take 001");
 			SetCountText();
+			annimationPlayed = true;
 		}
 	}
 
 	void SetCountText ()
 	{
 		p.text = "You Win!";
-		Time.timeScale = 0;
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.tag == "Soldat") {
-			life -= 2;
-			print ("ouch");
-		} else if (other.gameObject.tag == "Tank") {
-			life -= 1;
-			print ("ouch");
-		} else if (other.gameObject.tag == "Cavalier") {
-			life -= 3;
-			print ("ouch");
-		}
+		Unit unitScript = other.gameObject.GetComponent ("Unit") as Unit;
+		life -= unitScript.attack;
+		print ("ouch");
 	}
 }

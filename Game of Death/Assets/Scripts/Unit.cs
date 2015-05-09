@@ -38,7 +38,7 @@ public class Unit : MonoBehaviour {
 
 	public void move(){
 		modelX += direction;
-		if(modelX > model.nbColone || modelX < 0)
+		if(modelX > model.nbColone-1 || modelX < 0)
 			Destroy(gameObject);
 	}
 
