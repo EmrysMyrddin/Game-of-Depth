@@ -2,15 +2,14 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class FortressWall1 : MonoBehaviour {
-	
+public class FortressWall : MonoBehaviour {
+
 	int life = 10;
-	public Text p1;
-	public Text p2;
-	
+	public Text p;
+
 	// Use this for initialization
 	void Start () {
-		
+	
 	}
 	
 	// Update is called once per frame
@@ -23,9 +22,10 @@ public class FortressWall1 : MonoBehaviour {
 
 	void SetCountText ()
 	{
-		p2.text = "You Win!";
+		p.text = "You Win!";
+		Time.timeScale = 0;
 	}
-	
+
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "Soldat") {
 			life -= 2;
