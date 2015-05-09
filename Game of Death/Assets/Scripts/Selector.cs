@@ -48,7 +48,7 @@ public class Selector : MonoBehaviour {
 				nextTime = Time.time + secondUpdateRate;
 			}
 
-			if(z < model.nbLine - 0.5f){
+			if(z < model.nbLine - 1 - 0.5f){
 				modelY ++;
 				z += 1f;
 			}

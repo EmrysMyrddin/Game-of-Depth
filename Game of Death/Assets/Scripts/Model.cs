@@ -54,12 +54,18 @@ public class Model : MonoBehaviour {
 
 	public void spawnUnit(GameObject prefab, Vector3 position, int x, int y, int direction)
 	{
-		GameObject newUnit = (GameObject)GameObject.Instantiate (prefab, position , Quaternion.identity);
+		GameObject newUnit = (GameObject)GameObject.Instantiate (prefab, position , prefab.transform.rotation);
 		Unit newUnitScript = newUnit.GetComponent("Unit") as Unit;
 		newUnitScript.direction = direction;
 		newUnitScript.modelX = x;
 		newUnitScript.modelY = y;
 		newUnit.SetActive (true);
+		if (direction == 1) {
+			float rotx = newUnit.transform.rotation.x;
+			float roty = newUnit.transform.rotation.y;
+			float rotz = newUnit.transform.rotation.z;
+			newUnit.transform.Rotate (new Vector3 (rotx, y + 180f, rotz));
+		}
 		set (x, y, 3);
 	}
 }
