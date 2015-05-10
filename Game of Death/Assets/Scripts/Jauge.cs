@@ -19,6 +19,9 @@ public class Jauge : MonoBehaviour {
 
     bool perte;
 
+    // camera pour declencher les animations lors de la perte de pv
+    
+
     public void Start()
     {
         PerteVie(0);
@@ -27,6 +30,9 @@ public class Jauge : MonoBehaviour {
 
     public void PerteVie (int points)
     {
+        // changer perteVie de la camera en true pour declencher les vibrations
+        
+
         debut = debut + points;
 
         if (debut < transform.childCount)

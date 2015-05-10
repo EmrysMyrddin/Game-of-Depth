@@ -148,48 +148,6 @@ RectTransform:
   m_AnchoredPosition: {x: -398, y: 139}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
---- !u!1001 &341140880
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400074, guid: 7bd1b352a5b1a884e807f46a035d1c35, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.324
-      objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: 7bd1b352a5b1a884e807f46a035d1c35, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: .226999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: 7bd1b352a5b1a884e807f46a035d1c35, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9.03299999
-      objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: 7bd1b352a5b1a884e807f46a035d1c35, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: 7bd1b352a5b1a884e807f46a035d1c35, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: .99862498
-      objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: 7bd1b352a5b1a884e807f46a035d1c35, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: 7bd1b352a5b1a884e807f46a035d1c35, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: .0524231158
-      objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: 7bd1b352a5b1a884e807f46a035d1c35, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7bd1b352a5b1a884e807f46a035d1c35, type: 3}
-  m_IsPrefabParent: 0
 --- !u!1 &724988586
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +207,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &910529709
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +291,7 @@ MonoBehaviour:
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: test_martinn
+          m_StringArgument: valentin
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -914,4 +872,4 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1

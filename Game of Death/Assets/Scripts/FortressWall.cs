@@ -9,6 +9,8 @@ public class FortressWall : MonoBehaviour {
 
 	private bool annimationPlayed = false;
 
+    public Jauge jauge;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -34,6 +36,7 @@ public class FortressWall : MonoBehaviour {
 		Unit unitScript = other.gameObject.GetComponent ("Unit") as Unit;
 		life -= unitScript.attack;
 		print ("ouch");
+        jauge.PerteVie(1);
 		//Debug.Break ();
 	}
 }

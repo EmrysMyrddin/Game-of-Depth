@@ -18,6 +18,7 @@ public class ShakeBabyShake : MonoBehaviour
     private bool clicked = false;
     Vector3 originalPos;
 
+    private bool perteVie { get; set; }
 
     //
     bool playerIndexSet = false;
@@ -28,10 +29,8 @@ public class ShakeBabyShake : MonoBehaviour
 
     void Awake()
     {
-        if (camTransform == null)
-        {
-            camTransform = GetComponent(typeof(Transform)) as Transform;
-        }
+        perteVie = false;
+        if (camTransform == null) camTransform = GetComponent(typeof(Transform)) as Transform;
     }
 
     void OnEnable()
@@ -68,8 +67,9 @@ public class ShakeBabyShake : MonoBehaviour
             shake = shakeBase;
         }
 
-        if (Input.GetButtonDown("Fire1") || clicked == true)
+        if (perteVie || clicked)
         {
+            perteVie = false;
             clicked = true;
                 if (shake > 0)
                 {
