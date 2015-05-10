@@ -22,7 +22,7 @@ public class Model : MonoBehaviour {
 	void Update(){
 		if (Time.time > fpsTime) {
 			fpsTime = Time.time + 1f;
-			print ("fps : " + fps);
+			//print ("fps : " + fps);
 			fps = 0;
 		}
 		fps ++;

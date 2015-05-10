@@ -3,16 +3,22 @@ using System.Collections;
 
 public class Icons : MonoBehaviour {
 
+    public Jauge jauge;
+    public string button;
+
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetButtonDown("Fire1") &&  GetComponent<Animator>().GetBool("clicked") == false)
+        if (Input.GetButtonDown(button) &&  GetComponent<Animator>().GetBool("clicked") == false)
         {
-           GetComponent<Animator>().SetBool("clicked", true);
+            jauge.PerteVie(1);   
+            GetComponent<Animator>().SetBool("clicked", true);
         }
         else
         {
