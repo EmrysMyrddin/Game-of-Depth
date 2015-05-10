@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using XInputDotNetPure; // Required in C#
 
 public class ShakeBabyShake : MonoBehaviour
 {
@@ -17,6 +18,14 @@ public class ShakeBabyShake : MonoBehaviour
     private bool clicked = false;
     Vector3 originalPos;
 
+
+    //
+    bool playerIndexSet = false;
+    PlayerIndex playerIndex;
+    GamePadState state;
+    GamePadState prevState;
+    //
+
     void Awake()
     {
         if (camTransform == null)
@@ -32,6 +41,28 @@ public class ShakeBabyShake : MonoBehaviour
 
     void Update ()
     {
+
+        // Find a PlayerIndex, for a single player game
+        // Will find the first controller that is connected ans use it
+        if (!playerIndexSet || !prevState.IsConnected)
+        {
+            for (int i = 0; i < 4; ++i)
+            {
+                PlayerIndex testPlayerIndex = (PlayerIndex)i;
+                GamePadState testState = GamePad.GetState(testPlayerIndex);
+                if (testState.IsConnected)
+                {
+                    Debug.Log(string.Format("GamePad found {0}", testPlayerIndex));
+                    playerIndex = testPlayerIndex;
+                    playerIndexSet = true;
+                }
+            }
+        }
+
+        prevState = state;
+        state = GamePad.GetState(playerIndex);
+
+
         if (!clicked)
         {
             shake = shakeBase;
@@ -44,14 +75,15 @@ public class ShakeBabyShake : MonoBehaviour
                 {
                     camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
                     shake -= Time.deltaTime * decreaseFactor;
+                    GamePad.SetVibration(playerIndex, 2f, 2f);
+
                 }
                 else
                 {
                     shake = 0f;
                     camTransform.localPosition = originalPos;
                     clicked = false;
-                }    
+                }
         }
-
     }
 }

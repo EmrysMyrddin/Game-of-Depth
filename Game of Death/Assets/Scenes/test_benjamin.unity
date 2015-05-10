@@ -363,6 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a64a79bb442b142bef31b3590c5e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 10
   p: {fileID: 866991693}
 --- !u!65 &368893701
 BoxCollider:
@@ -470,8 +471,8 @@ MonoBehaviour:
   modelX: 0
   modelY: 0
   direction: 0
-  attack: 0
-  life: 0
+  attack: 2
+  life: 1
   type: 
 --- !u!23 &495193143
 MeshRenderer:
@@ -777,6 +778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a64a79bb442b142bef31b3590c5e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 10
   p: {fileID: 737606958}
 --- !u!65 &973210825
 BoxCollider:
@@ -836,8 +838,8 @@ MonoBehaviour:
   modelX: 0
   modelY: 0
   direction: 0
-  attack: 0
-  life: 0
+  attack: 12
+  life: 1
   type: 
 --- !u!23 &1258914844
 MeshRenderer:
@@ -1157,8 +1159,8 @@ MonoBehaviour:
   modelX: 0
   modelY: 0
   direction: 0
-  attack: 0
-  life: 0
+  attack: 1
+  life: 6
   type: 
 --- !u!23 &1691046881
 MeshRenderer:

@@ -8,7 +8,7 @@ public class Unit : MonoBehaviour {
 	public int attack;
 	public int life;
 	public string type;
-
+    private bool damagesHandled { get; set; }
 	private float x,y,z;
 	private Model model;
 
@@ -16,6 +16,7 @@ public class Unit : MonoBehaviour {
 	void Start () {
 		model = GameObject.Find ("Plateau").GetComponent("Model") as Model;
 		type = gameObject.tag;
+        damagesHandled = false;
 	}
 	
 	// Update is called once per frame
@@ -42,19 +43,46 @@ public class Unit : MonoBehaviour {
 			Destroy(gameObject);
 	}
 
-	bool Loose(int lifeOp, int attackOp) {
-		int me = this.attack / lifeOp;
-		int him = attackOp / this.life;
-		return (me > him) ? false : true;
-	}
 
 	void OnTriggerEnter(Collider other) {
-		string otherType = other.gameObject.tag;
-		Unit otherObject = other.gameObject.GetComponent<Unit>();
-		if (otherType == "Soldat" || otherType == "Tank" || otherType == "Cavalier") {
-			if (otherObject.Loose(this.life, this.attack)) {
-			    Destroy(other.gameObject);
-			}
-		}
+        
+        // tag opposé
+		string tagOp = other.gameObject.tag;
+        // object opposé
+		Unit opposant = other.gameObject.GetComponent<Unit>();
+
+        print("handled : " + opposant.damagesHandled);
+
+        if (!opposant.damagesHandled)
+        {
+            // si le tag correspond à une unité
+            if (tagOp == "Soldat" || tagOp == "Tank" || tagOp == "Cavalier")
+            {
+                bool everyOneAlive = true;
+                
+                while (everyOneAlive)
+                {
+                    this.life = this.life - opposant.attack;
+                    opposant.life = opposant.life - this.attack;
+
+                    if (opposant.life <= 0)
+                    {
+                        everyOneAlive = false;
+                        Destroy(opposant.gameObject);
+                    }
+                    if (this.life <= 0)
+                    {
+                        everyOneAlive = false;
+                        Destroy(this.gameObject);
+                    }
+                }
+            }
+
+            // indication que les dommages ont été gérés
+            damagesHandled = true;
+
+        } else {
+            opposant.damagesHandled = false;
+        }
 	}
 }
