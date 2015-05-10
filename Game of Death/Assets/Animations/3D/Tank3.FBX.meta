@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9529565e8c9823f46a34bb25bd3b3c22
-timeCreated: 1431185355
+guid: 165aa1c2a9a07f54a93709d098141c77
+timeCreated: 1431217458
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -87,43 +87,44 @@ ModelImporter:
     100158: Cylinder003
     100160: Cylinder004
     100162: Cylinder005
-    100164: Cylinder014
-    100166: Object001
-    100168: Object001 1
-    100170: Object002
-    100172: Object003
-    100174: Object007
-    100176: Object007 1
-    100178: Object009
-    100180: Object010
-    100182: Object011
-    100184: Object011 1
-    100186: Object012
-    100188: Object013
-    100190: Object014
-    100192: Object068
-    100194: Plane001
-    100196: Plane003
-    100198: Plane003 1
-    100200: Shield
-    100202: Sphere001
-    100204: Sphere002
-    100206: Sphere003
-    100208: Sphere004
-    100210: Sphere006
-    100212: Sphere007
-    100214: Sphere008
-    100216: Sphere009
-    100218: Sphere010
-    100220: Sphere011
-    100222: Sphere012
-    100224: Sphere013
-    100226: Sphere013 1
-    100228: Sphere015
-    100230: Sphere016
-    100232: Sphere017
-    100234: Sphere018
-    100236: //RootNode
+    100164: Object001
+    100166: Object001 1
+    100168: Object002
+    100170: Object003
+    100172: Object007
+    100174: Object007 1
+    100176: Object009
+    100178: Object010
+    100180: Object011
+    100182: Object011 1
+    100184: Object012
+    100186: Object013
+    100188: Object014
+    100190: Object070
+    100192: Object070 1
+    100194: Object071
+    100196: Plane001
+    100198: Plane003
+    100200: Plane003 1
+    100202: Shield
+    100204: Sphere001
+    100206: Sphere002
+    100208: Sphere003
+    100210: Sphere004
+    100212: Sphere006
+    100214: Sphere007
+    100216: Sphere008
+    100218: Sphere009
+    100220: Sphere010
+    100222: Sphere011
+    100224: Sphere012
+    100226: Sphere013
+    100228: Sphere013 1
+    100230: Sphere015
+    100232: Sphere016
+    100234: Sphere017
+    100236: Sphere018
+    100238: //RootNode
     400000: Bip001
     400002: Bip001 Footsteps
     400004: Bip001 Footsteps001
@@ -206,43 +207,44 @@ ModelImporter:
     400158: Cylinder003
     400160: Cylinder004
     400162: Cylinder005
-    400164: Cylinder014
-    400166: Object001
-    400168: Object001 1
-    400170: Object002
-    400172: Object003
-    400174: Object007
-    400176: Object007 1
-    400178: Object009
-    400180: Object010
-    400182: Object011
-    400184: Object011 1
-    400186: Object012
-    400188: Object013
-    400190: Object014
-    400192: Object068
-    400194: Plane001
-    400196: Plane003
-    400198: Plane003 1
-    400200: Shield
-    400202: Sphere001
-    400204: Sphere002
-    400206: Sphere003
-    400208: Sphere004
-    400210: Sphere006
-    400212: Sphere007
-    400214: Sphere008
-    400216: Sphere009
-    400218: Sphere010
-    400220: Sphere011
-    400222: Sphere012
-    400224: Sphere013
-    400226: Sphere013 1
-    400228: Sphere015
-    400230: Sphere016
-    400232: Sphere017
-    400234: Sphere018
-    400236: //RootNode
+    400164: Object001
+    400166: Object001 1
+    400168: Object002
+    400170: Object003
+    400172: Object007
+    400174: Object007 1
+    400176: Object009
+    400178: Object010
+    400180: Object011
+    400182: Object011 1
+    400184: Object012
+    400186: Object013
+    400188: Object014
+    400190: Object070
+    400192: Object070 1
+    400194: Object071
+    400196: Plane001
+    400198: Plane003
+    400200: Plane003 1
+    400202: Shield
+    400204: Sphere001
+    400206: Sphere002
+    400208: Sphere003
+    400210: Sphere004
+    400212: Sphere006
+    400214: Sphere007
+    400216: Sphere008
+    400218: Sphere009
+    400220: Sphere010
+    400222: Sphere011
+    400224: Sphere012
+    400226: Sphere013
+    400228: Sphere013 1
+    400230: Sphere015
+    400232: Sphere016
+    400234: Sphere017
+    400236: Sphere018
+    400238: //RootNode
     2300000: Box002
     2300002: Box002 1
     2300004: Cylinder001
@@ -251,39 +253,40 @@ ModelImporter:
     2300010: Cylinder003
     2300012: Cylinder004
     2300014: Cylinder005
-    2300016: Cylinder014
-    2300018: Object001
-    2300020: Object001 1
-    2300022: Object003
-    2300024: Object007
-    2300026: Object007 1
-    2300028: Object009
-    2300030: Object010
-    2300032: Object011 1
-    2300034: Object012
-    2300036: Object013
-    2300038: Object014
-    2300040: Object068
-    2300042: Plane001
-    2300044: Plane003
-    2300046: Plane003 1
-    2300048: Sphere001
-    2300050: Sphere002
-    2300052: Sphere003
-    2300054: Sphere004
-    2300056: Sphere006
-    2300058: Sphere007
-    2300060: Sphere008
-    2300062: Sphere009
-    2300064: Sphere010
-    2300066: Sphere011
-    2300068: Sphere012
-    2300070: Sphere013
-    2300072: Sphere013 1
-    2300074: Sphere015
-    2300076: Sphere016
-    2300078: Sphere017
-    2300080: Sphere018
+    2300016: Object001
+    2300018: Object001 1
+    2300020: Object003
+    2300022: Object007
+    2300024: Object007 1
+    2300026: Object009
+    2300028: Object010
+    2300030: Object011 1
+    2300032: Object012
+    2300034: Object013
+    2300036: Object014
+    2300038: Object070
+    2300040: Object070 1
+    2300042: Object071
+    2300044: Plane001
+    2300046: Plane003
+    2300048: Plane003 1
+    2300050: Sphere001
+    2300052: Sphere002
+    2300054: Sphere003
+    2300056: Sphere004
+    2300058: Sphere006
+    2300060: Sphere007
+    2300062: Sphere008
+    2300064: Sphere009
+    2300066: Sphere010
+    2300068: Sphere011
+    2300070: Sphere012
+    2300072: Sphere013
+    2300074: Sphere013 1
+    2300076: Sphere015
+    2300078: Sphere016
+    2300080: Sphere017
+    2300082: Sphere018
     3300000: Box002
     3300002: Box002 1
     3300004: Cylinder001
@@ -292,82 +295,84 @@ ModelImporter:
     3300010: Cylinder003
     3300012: Cylinder004
     3300014: Cylinder005
-    3300016: Cylinder014
-    3300018: Object001
-    3300020: Object001 1
-    3300022: Object003
-    3300024: Object007
-    3300026: Object007 1
-    3300028: Object009
-    3300030: Object010
-    3300032: Object011 1
-    3300034: Object012
-    3300036: Object013
-    3300038: Object014
-    3300040: Object068
-    3300042: Plane001
-    3300044: Plane003
-    3300046: Plane003 1
-    3300048: Sphere001
-    3300050: Sphere002
-    3300052: Sphere003
-    3300054: Sphere004
-    3300056: Sphere006
-    3300058: Sphere007
-    3300060: Sphere008
-    3300062: Sphere009
-    3300064: Sphere010
-    3300066: Sphere011
-    3300068: Sphere012
-    3300070: Sphere013
-    3300072: Sphere013 1
-    3300074: Sphere015
-    3300076: Sphere016
-    3300078: Sphere017
-    3300080: Sphere018
-    4300000: Cylinder014
-    4300002: Object068
-    4300004: Object002
-    4300006: Object009
-    4300008: Sphere015
-    4300010: Object003
-    4300012: Sphere016
-    4300014: Object001
-    4300016: Sphere013
-    4300018: Plane003
-    4300020: Box002
-    4300022: Object007
-    4300024: Cylinder001
-    4300026: Object010
-    4300028: Object011
-    4300030: Object012
-    4300032: Sphere017
-    4300034: Object013
-    4300036: Sphere018
-    4300038: Object001
-    4300040: Sphere013
-    4300042: Plane003
-    4300044: Box002
-    4300046: Object007
-    4300048: Cylinder001
-    4300050: Object014
-    4300052: Object011
-    4300054: Sphere012
-    4300056: Sphere011
-    4300058: Sphere010
-    4300060: Sphere009
-    4300062: Sphere002
-    4300064: Plane001
-    4300066: Sphere003
-    4300068: Sphere004
-    4300070: Sphere008
-    4300072: Sphere001
-    4300074: Sphere007
-    4300076: Sphere006
-    4300078: Cylinder004
-    4300080: Cylinder002
-    4300082: Cylinder003
-    4300084: Cylinder005
+    3300016: Object001
+    3300018: Object001 1
+    3300020: Object003
+    3300022: Object007
+    3300024: Object007 1
+    3300026: Object009
+    3300028: Object010
+    3300030: Object011 1
+    3300032: Object012
+    3300034: Object013
+    3300036: Object014
+    3300038: Object070
+    3300040: Object070 1
+    3300042: Object071
+    3300044: Plane001
+    3300046: Plane003
+    3300048: Plane003 1
+    3300050: Sphere001
+    3300052: Sphere002
+    3300054: Sphere003
+    3300056: Sphere004
+    3300058: Sphere006
+    3300060: Sphere007
+    3300062: Sphere008
+    3300064: Sphere009
+    3300066: Sphere010
+    3300068: Sphere011
+    3300070: Sphere012
+    3300072: Sphere013
+    3300074: Sphere013 1
+    3300076: Sphere015
+    3300078: Sphere016
+    3300080: Sphere017
+    3300082: Sphere018
+    4300000: Object070
+    4300002: Object002
+    4300004: Object009
+    4300006: Sphere015
+    4300008: Object003
+    4300010: Sphere016
+    4300012: Object001
+    4300014: Sphere013
+    4300016: Plane003
+    4300018: Box002
+    4300020: Object007
+    4300022: Cylinder001
+    4300024: Object010
+    4300026: Object011
+    4300028: Object012
+    4300030: Sphere017
+    4300032: Object013
+    4300034: Sphere018
+    4300036: Object001
+    4300038: Sphere013
+    4300040: Plane003
+    4300042: Box002
+    4300044: Object007
+    4300046: Cylinder001
+    4300048: Object014
+    4300050: Object011
+    4300052: Sphere012
+    4300054: Sphere011
+    4300056: Sphere010
+    4300058: Sphere009
+    4300060: Sphere002
+    4300062: Plane001
+    4300064: Sphere003
+    4300066: Sphere004
+    4300068: Sphere008
+    4300070: Sphere001
+    4300072: Sphere007
+    4300074: Sphere006
+    4300076: Cylinder004
+    4300078: Cylinder002
+    4300080: Cylinder003
+    4300082: Cylinder005
+    4300084: Object071
+    4300086: Object070
     7400000: Take 001
     9500000: //RootNode
     11100000: //RootNode
@@ -386,7 +391,7 @@ ModelImporter:
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 2
+    animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations: []
     isReadable: 1

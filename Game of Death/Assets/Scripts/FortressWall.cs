@@ -34,5 +34,6 @@ public class FortressWall : MonoBehaviour {
 		Unit unitScript = other.gameObject.GetComponent ("Unit") as Unit;
 		life -= unitScript.attack;
 		print ("ouch");
+		//Debug.Break ();
 	}
 }

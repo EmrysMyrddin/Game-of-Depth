@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Soldat
   - Tank
-  - Cavalier
+  - Assassin
   - Unit
   layers:
   - Default
@@ -19,7 +19,7 @@ TagManager:
   - 
   - Unit
   - Wall
-  - 
+  - noclip
   - 
   - 
   - 

@@ -7,9 +7,12 @@ public class Model : MonoBehaviour {
 	public float moveSpeed = 2f;
 	public float unitAnimationSpeed = 1f;
 
+	private bool hasRageQuit = false;
 	private int[,] plateau;
 	private float nextMove = 0f;
 	private float previousMove = 0f;
+	private int fps = 0;
+	private float fpsTime = 0f;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +20,13 @@ public class Model : MonoBehaviour {
 	}
 
 	void Update(){
+		if (Time.time > fpsTime) {
+			fpsTime = Time.time + 1f;
+			//print ("fps : " + fps);
+			fps = 0;
+		}
+		fps ++;
+
 		if (Time.time > nextMove) {
 			previousMove = nextMove;
 			nextMove += 1 / moveSpeed;
@@ -40,6 +50,15 @@ public class Model : MonoBehaviour {
 			}
 			previousMove = -1;
 		}
+
+		if (Input.GetButtonDown ("RageQuit") && !hasRageQuit) {
+			Unit[] units = GameObject.FindObjectsOfType(typeof(Unit)) as Unit[];
+			for(int i = 0; i < units.Length; i++)
+			{
+				units[i].rageQuit();
+			}
+			hasRageQuit = true;
+		}
 	}
 
 	public int get(int x, int y)
@@ -56,16 +75,19 @@ public class Model : MonoBehaviour {
 	{
 		GameObject newUnit = (GameObject)GameObject.Instantiate (prefab, position , prefab.transform.rotation);
 		Unit newUnitScript = newUnit.GetComponent("Unit") as Unit;
+
 		newUnitScript.direction = direction;
 		newUnitScript.modelX = x;
 		newUnitScript.modelY = y;
-		newUnit.SetActive (true);
+
 		if (direction == 1) {
 			float rotx = newUnit.transform.rotation.x;
 			float roty = newUnit.transform.rotation.y;
 			float rotz = newUnit.transform.rotation.z;
-			newUnit.transform.Rotate (new Vector3 (rotx, y + 180f, rotz));
+			newUnit.transform.Rotate (new Vector3 (rotx, roty + 180f, rotz));
 		}
+
+		newUnit.SetActive (true);
 		set (x, y, 3);
 	}
 }

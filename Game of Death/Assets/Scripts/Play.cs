@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Play : MonoBehaviour {
 
+	public string game;
 	
     public void LoadGame(string game)
     {

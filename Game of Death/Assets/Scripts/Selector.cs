@@ -8,11 +8,9 @@ public class Selector : MonoBehaviour {
 	private bool goingUp = false;
 	private bool isFirstPush = true;
 	private Model model;
-	private float dontSpamDickHead = 0.0f;
 	private bool canSpawn = true;
 	private GameObject requestedSpawn = null;
-	
-	private float CDpop;
+
 	public float firstUpdateRate =  0.2f;
 	public float secondUpdateRate =  0.1f;
 	public string inputPostfix;
@@ -28,7 +26,6 @@ public class Selector : MonoBehaviour {
 		y = this.gameObject.transform.position.y;
 
 		model = GameObject.Find ("Plateau").GetComponent("Model") as Model;
-		CDpop = 1/model.moveSpeed;
 	}
 	
 	// Update is called once per frame
@@ -75,7 +72,7 @@ public class Selector : MonoBehaviour {
 		//if (model.get (modelX, modelY) == 0) {
 		if (Input.GetButtonDown ("Fire1" + inputPostfix)) {
 			if(canSpawn){
-				model.spawnUnit(Soldat_p1, new Vector3 (x, 0.5f, z), modelX, modelY, direction);
+				model.spawnUnit(Soldat_p1, new Vector3 (x, 0, z), modelX, modelY, direction);
 				canSpawn = false;
 			}
 			else{
@@ -83,7 +80,7 @@ public class Selector : MonoBehaviour {
 			}
 		} else if (Input.GetButtonDown ("Fire2" + inputPostfix)) {
 			if(canSpawn){
-				model.spawnUnit(Tank_p1, new Vector3 (x, 0.5f, z), modelX, modelY, direction);
+				model.spawnUnit(Tank_p1, new Vector3 (x, 0, z), modelX, modelY, direction);
 				canSpawn = false;
 			}
 			else{
@@ -91,7 +88,7 @@ public class Selector : MonoBehaviour {
 			}
 		} else if (Input.GetButtonDown ("Fire3" + inputPostfix)) {
 			if(canSpawn){
-				model.spawnUnit(Cavalier_p1, new Vector3 (x, 0.5f, z), modelX, modelY, direction);
+				model.spawnUnit(Cavalier_p1, new Vector3 (x, 0, z), modelX, modelY, direction);
 				canSpawn = false;
 			}
 			else{
@@ -110,7 +107,7 @@ public class Selector : MonoBehaviour {
 	public void hasMoved()
 	{
 		if (requestedSpawn != null) {
-			model.spawnUnit (requestedSpawn, new Vector3 (x, 0.5f, z), modelX, modelY, direction);
+			model.spawnUnit (requestedSpawn, new Vector3 (x, 0, z), modelX, modelY, direction);
 			canSpawn = false;
 		}
 		else
